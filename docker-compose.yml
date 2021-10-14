@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  bind9:
+    image: internetsystemsconsortium/bind9:9.16 
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+      - "127.0.0.1:953:953/tcp"
+    volumes:
+      - vol1:/etc/bind
+      - vol2:/var/cache/bind
+      - vol3:/var/lib/bind
+      - vol4:/var/log
+volumes:
+vol1:
+vol2:
+vol3:
+vol4:
